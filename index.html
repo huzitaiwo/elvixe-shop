@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elvixe — Thoughtful Skincare</title>
+    <meta
+      name="description"
+      content="Elvixe is thoughtful skincare for the life your skin is already living."
+    />
+    <meta name="theme-color" content="#929986" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header-footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body data-page="home">
+    <div id="site-header"></div>
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero">
+        <img
+          class="hero__img"
+          src="assets/images/hero.webp"
+          alt=""
+          fetchpriority="high"
+        />
+        <div class="hero__shade"></div>
+        <div class="container hero__copy">
+          <p class="hero__eyebrow">Thoughtful skincare, every day</p>
+          <h1>Skincare for body &amp; every skin</h1>
+          <a class="link-arrow hero__link" href="shop.html"
+            >Find your ritual
+            <svg style="transform: rotate(90deg)" aria-hidden="true">
+              <use href="#i-arrow" /></svg
+          ></a>
+        </div>
+        <div class="outline-word hero__word" aria-hidden="true">Elvixe</div>
+        <a class="hero__scroll" href="#approach" aria-label="Scroll to content">
+          <svg width="12" height="12" aria-hidden="true">
+            <use href="#i-chevron" /></svg
+        ></a>
+      </section>
+
+      <!-- OUR APPROACH -->
+      <section class="section section--yellow approach" id="approach">
+        <div class="container">
+          <div class="approach__grid">
+            <p class="eyebrow">/ Our approach</p>
+            <div>
+              <h2 class="approach__title">
+                Care should be <strong>simple, honest,</strong> and made for the
+                skin you’re in.
+              </h2>
+              <p class="lede approach__text">
+                Elvixe keeps the ritual clear: thoughtfully chosen formulas,
+                gentle daily steps, and room for your skin to change with you.
+              </p>
+            </div>
+          </div>
+          <div class="approach__foot">
+            <a class="btn btn--outline" href="shop.html"
+              >Explore the edit
+              <svg aria-hidden="true"><use href="#i-arrow" /></svg
+            ></a>
+            <p class="approach__note">
+              <span class="icon-btn"
+                ><svg aria-hidden="true"><use href="#i-dots" /></svg
+              ></span>
+              Skin is personal. A routine should leave space for that.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- THE EDIT (carousel) -->
+      <section class="section edit" id="edit">
+        <div class="container edit__head">
+          <div>
+            <p class="eyebrow">/ Most reached for</p>
+            <h2>The Elvixe<br />skincare edit</h2>
+          </div>
+          <div class="edit__arrows">
+            <button class="icon-btn" data-edit-prev aria-label="Previous">
+              <svg style="transform: rotate(180deg)" aria-hidden="true">
+                <use href="#i-arrow-right" />
+              </svg>
+            </button>
+            <button
+              class="icon-btn icon-btn--fill"
+              data-edit-next
+              aria-label="Next"
+            >
+              <svg aria-hidden="true"><use href="#i-arrow-right" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="edit__track" id="edit-track">
+          <!-- cards rendered by home.js -->
+        </div>
+      </section>
+
+      <!-- BUILD A ROUTINE -->
+      <section class="section routine" id="routine">
+        <div class="container routine__grid">
+          <div class="routine__intro">
+            <p class="eyebrow">/ Build a routine</p>
+            <h2>Radiance starts with a rhythm.</h2>
+            <p class="lede">
+              Great skin care rarely asks for everything at once. It asks for
+              the right things, returned to gently.
+            </p>
+            <a class="btn btn--dark" href="routines.html"
+              >Find your rhythm
+              <svg aria-hidden="true"><use href="#i-arrow" /></svg
+            ></a>
+          </div>
+          <ul class="routine__steps" id="routine-steps">
+            <!-- rendered by home.js -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- BENEFITS -->
+      <section class="benefits">
+        <div class="benefits__photo">
+          <img src="assets/images/benefits.webp" alt="" />
+          <div class="benefits__copy">
+            <p class="eyebrow">/ The ritual, considered</p>
+            <h2>Benefits you’ll <em class="serif">feel</em> into.</h2>
+            <p class="benefits__mobile-note">
+              Each formula is designed to support the small moments of care you
+              can come back to, morning and night.
+            </p>
+          </div>
+        </div>
+        <div class="benefits__panel">
+          <ul class="benefits__list">
+            <li>
+              <span class="n">01</span>
+              <h3>Comfort first</h3>
+              <p>Lightweight layers that meet skin with a softer touch.</p>
+              <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+            </li>
+            <li>
+              <span class="n">02</span>
+              <h3>Thoughtful texture</h3>
+              <p>Forms that make a daily practice feel easy to continue.</p>
+              <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+            </li>
+            <li>
+              <span class="n">03</span>
+              <h3>Steady rhythm</h3>
+              <p>A slower, more personal way to build consistency.</p>
+              <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+            </li>
+            <li>
+              <span class="n">04</span>
+              <h3>Clear intention</h3>
+              <p>
+                Every step is here for a reason—and never just to add noise.
+              </p>
+              <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- MADE FOR REAL ROUTINES -->
+      <section class="section section--cream50 real">
+        <div class="container real__grid">
+          <div>
+            <p class="eyebrow">/ Made for real routines</p>
+            <h2>A quietly rigorous way to care.</h2>
+            <p class="lede">
+              We design care around a simple premise: your bathroom shelf can be
+              beautiful without becoming complicated.
+            </p>
+          </div>
+          <div class="real__line">
+            <div class="real__col real__col--l">
+              <span class="n">01</span>
+              <h3>Mindful formulation</h3>
+              <p>Textural, approachable care built around daily return.</p>
+            </div>
+            <div class="real__mid">
+              <img src="assets/images/portrait.webp" alt="" />
+              <span class="real__stem"></span><span class="dot dot--y"></span
+              ><span class="dot dot--d"></span>
+            </div>
+            <div class="real__col real__col--r">
+              <span class="n">02</span>
+              <h3>Ritual over rush</h3>
+              <p>Small, repeatable steps that respect your individual pace.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- JOURNAL -->
+      <section class="section section--beige journal">
+        <div class="container">
+          <div class="journal__head">
+            <div>
+              <p class="eyebrow">/ From the Elvixe journal</p>
+              <h2>A slower way<br />to care.</h2>
+            </div>
+            <a class="btn btn--outline" href="approach.html"
+              >Read our approach
+              <svg aria-hidden="true"><use href="#i-arrow" /></svg
+            ></a>
+          </div>
+          <div class="journal__grid">
+            <article class="jcard jcard--quote">
+              <span class="jcard__q">“</span>
+              <div>
+                <p>
+                  Care works best when it feels like an invitation—not an
+                  instruction.
+                </p>
+                <small>Elvixe Studio Note / 01</small>
+              </div>
+            </article>
+            <article class="jcard jcard--photo">
+              <img src="assets/images/portrait.webp" alt="" />
+              <p>Skin, without the noise.</p>
+            </article>
+            <article class="jcard jcard--yellow">
+              <span class="eyebrow">Our promise</span>
+              <div>
+                <h3>Less clutter.<br />More clarity.</h3>
+                <p>We are building a ritual with room to be yours.</p>
+                <a class="link-arrow" href="shop.html"
+                  >Explore the edit
+                  <svg aria-hidden="true"><use href="#i-arrow" /></svg
+                ></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/home.js"></script>
+    <!-- later: cart.js, then the page script -->
+  </body>
+</html>

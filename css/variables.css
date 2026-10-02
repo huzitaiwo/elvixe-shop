@@ -1,0 +1,40 @@
+:root {
+  /* Sampled from screenshot */
+  --sage: #929986;
+  --yellow: #f3e76d;
+  --cream-50: #fffaf0; /* "made for real routines" */
+  --cream-100: #fbf7ed; /* skincare edit */
+  --cream-200: #f6f1e7; /* build a routine */
+  --beige: #f3ebe1; /* journal */
+
+  /* Approximate: sampled but mixed with text/gradients */
+  --hero-dark: #20140b;
+  --benefits-dark: #32180e;
+  --quote-card: #442016;
+  --ink: #3c2118; /* text, buttons, footer base */
+  --ink-soft: #6b5548; /* body copy (estimated by eye) */
+  --glass: #5c3b30; /* benefit cards */
+  --footer-glow: #70412d;
+  --gold: #e8c46a; /* numerals on dark (estimated by eye) */
+  --line: rgba(60, 33, 24, 0.14);
+
+  /* Type: Google Font approximations, not confirmed */
+  --font-sans: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+
+  --fs-eyebrow: 0.6875rem;
+  --fs-body: 1rem;
+  --fs-h2: clamp(2.25rem, 4.4vw, 3.75rem);
+  --fs-h1: clamp(2.75rem, 6vw, 5rem);
+
+  /* Layout */
+  --gutter: clamp(20px, 6.5vw, 96px);
+  --max: 1440px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-pill: 999px;
+  --header-h: 72px;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 0.35s;
+}
