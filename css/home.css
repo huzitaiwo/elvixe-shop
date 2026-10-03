@@ -156,15 +156,9 @@
 .edit__track::-webkit-scrollbar {
   display: none;
 }
-.pcard {
+.edit__track .pcard {
   flex: 0 0 calc((100% - 36px) / 4);
   scroll-snap-align: start;
-  background: var(--cream-50);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 .pcard__img {
   position: relative;
@@ -243,12 +237,6 @@
 .pcard .btn {
   height: 34px;
   font-size: 0.5625rem;
-}
-.pcard__cap {
-  margin-top: 6px;
-  font-size: 0.5625rem;
-  color: var(--ink-soft);
-  text-align: center;
 }
 
 /* ---------- Build a routine ---------- */
@@ -628,7 +616,7 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
-  .pcard {
+  .edit__track .pcard {
     flex-basis: calc((100% - 12px) / 2.4);
   }
 }

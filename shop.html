@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Elvixe — Thoughtful Skincare</title>
+    <title>The edit — Elvixe</title>
     <meta
       name="description"
-      content="Elvixe is thoughtful skincare for the life your skin is already living."
+      content="The Elvixe skincare edit: thoughtfully chosen formulas for gentle daily steps."
     />
     <meta name="theme-color" content="#929986" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,16 +18,39 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/header-footer.css" />
-    <!-- <link rel="stylesheet" href="css/home.css"> -->
+    <link rel="stylesheet" href="css/shop.css" />
   </head>
   <body data-page="shop">
     <div id="site-header"></div>
-    <main id="main"></main>
+
+    <main id="main">
+      <section class="shop-head">
+        <div class="container shop-head__grid">
+          <p class="eyebrow">/ Most reached for</p>
+          <div>
+            <h1>The Elvixe<br />skincare edit</h1>
+            <p class="lede">
+              Thoughtfully chosen formulas for gentle daily steps. Start with
+              one and build from there.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="container shop-grid"
+        id="shop-grid"
+        aria-label="Products"
+      ></section>
+    </main>
+
     <div id="site-footer"></div>
 
     <script src="js/components.js"></script>
     <script src="js/header.js"></script>
-    <!-- later: cart.js, then the page script -->
+    <script src="js/products.js"></script>
+    <script src="js/shop.js"></script>
   </body>
 </html>

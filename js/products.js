@@ -1,0 +1,64 @@
+(function () {
+  const E = (window.elvixe = window.elvixe || {});
+
+  E.formatPrice = (n) => "₦" + Number(n).toLocaleString("en-NG");
+
+  // TODO: prices in ₦ (the reference shows none, so none are invented). Moves to Firestore at build step 9.
+  E.products = [
+    {
+      id: "velvet-cleanse",
+      name: "Velvet Cleanse",
+      category: "Cream cleanser",
+      tag: "A considered first step",
+      tint: "#8c5e36",
+      image: "assets/images/products/velvet-cleanse.jpg",
+      price: null,
+    },
+    {
+      id: "daylight-serum",
+      name: "Daylight Serum",
+      category: "Vitamin C + niacinamide",
+      tag: "Brighten, then breathe",
+      tint: "#e2c4ad",
+      image: "assets/images/products/daylight-serum.jpg",
+      price: null,
+    },
+    {
+      id: "sola-veil",
+      name: "Sola Veil",
+      category: "Daily skin shield",
+      tag: "Weightless by design",
+      tint: "#d4c9b8",
+      image: "assets/images/products/sola-veil.jpg",
+      price: null,
+    },
+    {
+      id: "morrow-cream",
+      name: "Morrow Cream",
+      category: "Barrier support",
+      tag: "For the hours ahead",
+      tint: "#c19e73",
+      image: "assets/images/products/morrow-cream.jpg",
+      price: null,
+    },
+  ];
+
+  const icon = (id) => `<svg aria-hidden="true"><use href="#i-${id}"/></svg>`;
+
+  E.productCard = (p) => `
+    <article class="pcard">
+      <a class="pcard__img" href="product.html?id=${p.id}" style="--tint:${p.tint}">
+        <img src="${p.image}" alt="${p.name}" loading="lazy">
+        <span class="pcard__badge">${icon("check")}In the edit</span>
+        <span class="pcard__side">Elvixe / Daily care</span>
+        <span class="pcard__tag">${p.tag}</span>
+      </a>
+      <div class="pcard__body">
+        <span class="pcard__cat">${p.category}</span>
+        <h3 class="pcard__name">${p.name}</h3>
+        ${p.price != null ? `<span class="pcard__price">${E.formatPrice(p.price)}</span>` : ""}
+        <button class="btn btn--dark" data-add="${p.id}">Build this step ${icon("arrow")}</button>
+        <p class="pcard__cap">Learn how this step fits your skin.</p>
+      </div>
+    </article>`;
+})();
