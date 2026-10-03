@@ -3,11 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Elvixe — Thoughtful Skincare</title>
-    <meta
-      name="description"
-      content="Elvixe is thoughtful skincare for the life your skin is already living."
-    />
+    <title>Elvixe</title>
+    <meta name="description" content="Elvixe thoughtful skincare." />
     <meta name="theme-color" content="#929986" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,16 +15,37 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/header-footer.css" />
-    <!-- <link rel="stylesheet" href="css/home.css"> -->
+    <link rel="stylesheet" href="css/product.css" />
   </head>
-  <body data-page="product">
+  <body data-page="shop">
     <div id="site-header"></div>
-    <main id="main"></main>
+
+    <main id="main">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span
+          ><a href="shop.html">The edit</a><span>/</span
+          ><span id="crumb-name" aria-current="page"></span>
+        </nav>
+        <section class="pdp" id="pdp"></section>
+      </div>
+
+      <section class="section more" id="more" hidden>
+        <div class="container">
+          <p class="eyebrow">/ More from the edit</p>
+          <h2>Keep building.</h2>
+          <div class="more__grid" id="more-grid"></div>
+        </div>
+      </section>
+    </main>
+
     <div id="site-footer"></div>
 
     <script src="js/components.js"></script>
     <script src="js/header.js"></script>
-    <!-- later: cart.js, then the page script -->
+    <script src="js/products.js"></script>
+    <script src="js/product.js"></script>
   </body>
 </html>

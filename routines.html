@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Elvixe — Thoughtful Skincare</title>
+    <title>Routines — Elvixe</title>
     <meta
       name="description"
-      content="Elvixe is thoughtful skincare for the life your skin is already living."
+      content="Radiance starts with a rhythm. Build a gentle daily routine, one step at a time."
     />
     <meta name="theme-color" content="#929986" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,16 +18,47 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/header-footer.css" />
-    <!-- <link rel="stylesheet" href="css/home.css"> -->
+    <link rel="stylesheet" href="css/routines.css" />
   </head>
   <body data-page="routines">
     <div id="site-header"></div>
-    <main id="main"></main>
+
+    <main id="main">
+      <section class="rhead">
+        <div class="container rhead__grid">
+          <p class="eyebrow">/ Build a routine</p>
+          <div>
+            <h1>Radiance starts<br />with a rhythm.</h1>
+            <p class="lede">
+              Great skin care rarely asks for everything at once. It asks for
+              the right things, returned to gently.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container rlist">
+        <ol id="rlist"></ol>
+      </section>
+
+      <section class="section section--yellow rcta">
+        <div class="container rcta__inner">
+          <h2>Less clutter.<br />More clarity.</h2>
+          <a class="btn btn--outline" href="shop.html"
+            >Explore the edit
+            <svg aria-hidden="true"><use href="#i-arrow" /></svg
+          ></a>
+        </div>
+      </section>
+    </main>
+
     <div id="site-footer"></div>
 
     <script src="js/components.js"></script>
     <script src="js/header.js"></script>
-    <!-- later: cart.js, then the page script -->
+    <script src="js/products.js"></script>
+    <script src="js/routines.js"></script>
   </body>
 </html>
