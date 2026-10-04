@@ -1,0 +1,126 @@
+.jhead {
+  background: var(--beige);
+  padding-block: clamp(48px, 7vw, 96px) clamp(28px, 4vw, 48px);
+}
+.jhead__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+}
+.jhead .eyebrow {
+  margin-bottom: 18px;
+}
+.jhead h1 {
+  font-size: var(--fs-h2);
+}
+.jhead .btn {
+  height: 34px;
+  font-size: 0.5625rem;
+}
+
+.jbody {
+  background: var(--beige);
+  padding-bottom: clamp(64px, 9vw, 120px);
+}
+.jgrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr 0.9fr;
+  gap: 6px;
+}
+.todo {
+  margin-top: 24px;
+  background: rgba(243, 231, 109, 0.45);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  width: fit-content;
+}
+
+.jcard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: clamp(300px, 30vw, 440px);
+  padding: clamp(18px, 2vw, 26px);
+  overflow: hidden;
+}
+.jcard--quote {
+  background: var(--quote-card);
+  color: #fff;
+}
+.jcard__q {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  line-height: 0.8;
+}
+.jcard--quote p {
+  font-size: 0.8125rem;
+  letter-spacing: -0.02em;
+  max-width: 30ch;
+}
+.jcard--quote small {
+  display: block;
+  margin-top: 14px;
+  font-size: 0.5625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.jcard--photo {
+  padding: 0;
+  justify-content: flex-end;
+  background: #d4c9b8;
+}
+.jcard--photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.jcard--photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(32, 20, 11, 0.45), transparent 45%);
+}
+.jcard--photo p {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  color: #fff;
+  font-size: 1.0625rem;
+  letter-spacing: -0.04em;
+}
+.jcard--yellow {
+  background: var(--yellow);
+}
+.jcard--yellow h3 {
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  margin-bottom: 12px;
+}
+.jcard--yellow p {
+  font-size: 0.625rem;
+  margin-bottom: 14px;
+}
+.jcard--yellow .link-arrow {
+  font-size: 0.6875rem;
+}
+
+@media (max-width: 900px) {
+  .jhead__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .jgrid {
+    grid-template-columns: 1fr;
+  }
+  .jcard {
+    min-height: 200px;
+  }
+  .jcard--photo {
+    min-height: 320px;
+  }
+}
