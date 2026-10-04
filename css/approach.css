@@ -1,0 +1,250 @@
+.section--yellow,
+.section--cream50,
+.section--beige {
+  padding-block: clamp(56px, 8vw, 112px);
+}
+.section--yellow {
+  background: var(--yellow);
+}
+.section--cream50 {
+  background: var(--cream-50);
+}
+.section--beige {
+  background: var(--beige);
+}
+
+.ap-grid {
+  display: grid;
+  grid-template-columns: 28% 1fr;
+  gap: 24px;
+}
+.ap-hero h1 {
+  font-size: clamp(2rem, 4.4vw, 4rem);
+  max-width: 20ch;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+.ap-hero .lede {
+  margin-top: 26px;
+  font-size: 0.9375rem;
+  max-width: 46ch;
+}
+.ap-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: clamp(40px, 6vw, 80px);
+  font-size: 0.6875rem;
+}
+.ap-note .icon-btn {
+  width: 24px;
+  height: 24px;
+  flex: none;
+}
+.ap-note svg {
+  width: 11px;
+  height: 11px;
+}
+
+.section--cream50 h2 {
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  margin-bottom: 20px;
+}
+.section--cream50 .lede {
+  font-size: 0.875rem;
+  max-width: 38ch;
+}
+.ap-principles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-top: clamp(32px, 5vw, 56px);
+  border-top: 1px solid var(--line);
+}
+.ap-principles > div {
+  padding: 24px 24px 0 0;
+}
+.ap-principles > div + div {
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
+}
+.n {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+.ap-principles h3 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.ap-principles p {
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  max-width: 28ch;
+}
+
+.ap-benefits {
+  background: var(--benefits-dark);
+  color: #fff;
+  padding-block: clamp(56px, 8vw, 112px);
+}
+.ap-benefits .eyebrow {
+  font-size: 0.5625rem;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.ap-benefits h2 {
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  margin-bottom: clamp(28px, 4vw, 48px);
+}
+.ap-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.ap-benefits__grid li {
+  padding: 18px 20px 24px;
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  min-height: 180px;
+}
+.ap-benefits__grid .n {
+  color: var(--gold);
+  margin-bottom: 40px;
+}
+.ap-benefits__grid h3 {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.ap-benefits__grid p {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  opacity: 0.75;
+  max-width: 28ch;
+}
+
+.ap-quote {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: 6px;
+}
+.ap-quote__text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: clamp(320px, 32vw, 460px);
+  padding: clamp(20px, 2.4vw, 32px);
+  background: var(--quote-card);
+  color: #fff;
+}
+.ap-quote__mark {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  line-height: 0.8;
+}
+.ap-quote blockquote {
+  font-size: clamp(1rem, 1.6vw, 1.375rem);
+  letter-spacing: -0.03em;
+  max-width: 26ch;
+}
+.ap-quote figcaption {
+  margin-top: 16px;
+  font-size: 0.5625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.ap-quote__photo {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #d4c9b8;
+}
+.ap-quote__photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ap-quote__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(32, 20, 11, 0.45), transparent 45%);
+}
+.ap-quote__photo p {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  color: #fff;
+  font-size: 1.125rem;
+  letter-spacing: -0.04em;
+}
+
+.todo {
+  background: rgba(243, 231, 109, 0.45);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  width: fit-content;
+}
+
+.ap-promise {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+}
+.ap-promise .eyebrow {
+  display: block;
+  margin-bottom: 20px;
+}
+.ap-promise h2 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  margin-bottom: 14px;
+}
+.ap-promise p {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 1000px) {
+  .ap-benefits__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .ap-grid,
+  .ap-quote {
+    grid-template-columns: 1fr;
+  }
+  .ap-principles {
+    grid-template-columns: 1fr;
+  }
+  .ap-principles > div + div {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    margin-top: 24px;
+  }
+  .ap-quote__photo {
+    min-height: 320px;
+  }
+  .ap-promise {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 520px) {
+  .ap-benefits__grid {
+    grid-template-columns: 1fr;
+  }
+}
