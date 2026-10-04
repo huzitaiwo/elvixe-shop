@@ -3,11 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Elvixe — Thoughtful Skincare</title>
-    <meta
-      name="description"
-      content="Elvixe is thoughtful skincare for the life your skin is already living."
-    />
+    <title>Contact — Elvixe</title>
+    <meta name="description" content="Write to the Elvixe studio." />
     <meta name="theme-color" content="#929986" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,16 +15,96 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/header-footer.css" />
-    <!-- <link rel="stylesheet" href="css/home.css"> -->
+    <link rel="stylesheet" href="css/contact.css" />
   </head>
   <body data-page="contact">
     <div id="site-header"></div>
-    <main id="main"></main>
+
+    <main id="main">
+      <section class="chead">
+        <div class="container chead__grid">
+          <p class="eyebrow">/ Contact</p>
+          <div>
+            <h1>Write to<br />the studio.</h1>
+            <p class="lede">
+              Questions about a step, a formula or your routine? Send a note and
+              we’ll write back.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cbody">
+        <div class="container cbody__grid">
+          <form class="cform" id="contact-form" novalidate>
+            <div class="field">
+              <label for="c-name">Name</label>
+              <input
+                id="c-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                maxlength="100"
+                required
+              />
+              <span class="field__err" data-err="name"></span>
+            </div>
+            <div class="field">
+              <label for="c-email">Email</label>
+              <input
+                id="c-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                maxlength="200"
+                required
+              />
+              <span class="field__err" data-err="email"></span>
+            </div>
+            <div class="field">
+              <label for="c-message">Message</label>
+              <textarea
+                id="c-message"
+                name="message"
+                rows="6"
+                maxlength="2000"
+                required
+              ></textarea>
+              <span class="field__err" data-err="message"></span>
+            </div>
+            <!-- Spam trap: real visitors never see or fill this -->
+            <div class="hp" aria-hidden="true">
+              <label
+                >Leave empty
+                <input name="website" tabindex="-1" autocomplete="off"
+              /></label>
+            </div>
+            <button class="btn btn--dark" type="submit" id="c-submit">
+              Send message <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+            </button>
+            <p class="cform__status" id="c-status" role="status"></p>
+          </form>
+
+          <aside class="cinfo">
+            <p class="eyebrow">/ Find us</p>
+            <p class="todo">[TODO: email address]</p>
+            <p class="todo">[TODO: phone / WhatsApp]</p>
+            <p class="todo">[TODO: studio address and opening hours]</p>
+            <p class="cinfo__note">
+              Looking for a shop near you? See our
+              <a href="stockists.html">stockists</a>.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
     <div id="site-footer"></div>
 
     <script src="js/components.js"></script>
     <script src="js/header.js"></script>
-    <!-- later: cart.js, then the page script -->
+    <script type="module" src="js/contact.js"></script>
   </body>
 </html>
