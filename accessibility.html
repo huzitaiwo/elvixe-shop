@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Elvixe — Thoughtful Skincare</title>
+    <title>Accessibility — Elvixe</title>
     <meta
       name="description"
-      content="Elvixe is thoughtful skincare for the life your skin is already living."
+      content="Our commitment to making Elvixe usable by everyone."
     />
     <meta name="theme-color" content="#929986" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,16 +18,105 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/header-footer.css" />
-    <!-- <link rel="stylesheet" href="css/home.css"> -->
+    <link rel="stylesheet" href="css/legal.css" />
   </head>
   <body data-page="accessibility">
     <div id="site-header"></div>
-    <main id="main"></main>
+
+    <main id="main">
+      <section class="lhead">
+        <div class="container lhead__grid">
+          <p class="eyebrow">/ Accessibility</p>
+          <div>
+            <h1>Care for<br />every visitor.</h1>
+            <p class="lede">
+              We want everyone to be able to browse and buy from Elvixe
+              comfortably. Last updated 7 October 2026.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lbody">
+        <div class="container lbody__grid">
+          <nav class="lside" aria-label="On this page">
+            <a href="#commitment">Our commitment</a
+            ><a href="#measures">What we do</a>
+            <a href="#limits">Known limitations</a
+            ><a href="#feedback">Tell us</a>
+          </nav>
+
+          <article class="prose">
+            <h2 id="commitment">Our commitment</h2>
+            <p>
+              We aim for this site to meet the Web Content Accessibility
+              Guidelines (WCAG) 2.1 at level AA. We are still improving, and we
+              treat accessibility as ongoing work rather than a finished
+              checklist.
+            </p>
+
+            <h2 id="measures">What we do</h2>
+            <ul>
+              <li>
+                Use clear, semantic page structure with headings and landmarks,
+                so screen readers can navigate easily.
+              </li>
+              <li>
+                Make navigation, the menu, the bag and forms usable with a
+                keyboard, with visible focus outlines.
+              </li>
+              <li>
+                Label form fields and show error messages in text, not by colour
+                alone.
+              </li>
+              <li>Provide text alternatives for meaningful images.</li>
+              <li>
+                Build layouts that adapt to different screen sizes and text
+                zoom.
+              </li>
+              <li>
+                Keep body text at readable sizes and contrast on light
+                backgrounds.
+              </li>
+            </ul>
+
+            <h2 id="limits">Known limitations</h2>
+            <ul>
+              <li>
+                Some small, decorative or uppercase labels may be harder to read
+                for some people. We are reviewing text sizes and contrast.
+              </li>
+              <li>
+                The product carousel on the home page needs its arrow buttons or
+                horizontal scrolling to move between items.
+              </li>
+              <li>
+                Some third-party services we use, such as the Paystack payment
+                window, are outside our control.
+              </li>
+            </ul>
+
+            <h2 id="feedback">Tell us</h2>
+            <p>
+              If something on the site is hard to use, or you need information
+              in a different format, please tell us through the
+              <a href="contact.html">contact page</a>. Describe the page and
+              what went wrong, and we will do our best to help and to fix the
+              problem.
+              <span class="todo"
+                >[TODO: accessibility contact email and response time]</span
+              >
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
     <div id="site-footer"></div>
 
     <script src="js/components.js"></script>
     <script src="js/header.js"></script>
-    <!-- later: cart.js, then the page script -->
   </body>
 </html>
