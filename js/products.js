@@ -1,9 +1,6 @@
 (function () {
   const E = (window.elvixe = window.elvixe || {});
 
-  E.formatPrice = (n) => "₦" + Number(n).toLocaleString("en-NG");
-
-  // TODO: prices in ₦ (the reference shows none, so none are invented). Moves to Firestore at build step 9.
   E.products = [
     {
       id: "velvet-cleanse",
@@ -12,7 +9,7 @@
       tag: "A considered first step",
       tint: "#8c5e36",
       image: "assets/images/products/velvet-cleanse.jpg",
-      price: null,
+      price: 12500,
     },
     {
       id: "daylight-serum",
@@ -21,7 +18,7 @@
       tag: "Brighten, then breathe",
       tint: "#e2c4ad",
       image: "assets/images/products/daylight-serum.jpg",
-      price: null,
+      price: 22000,
     },
     {
       id: "sola-veil",
@@ -30,7 +27,7 @@
       tag: "Weightless by design",
       tint: "#d4c9b8",
       image: "assets/images/products/sola-veil.jpg",
-      price: null,
+      price: 18500,
     },
     {
       id: "morrow-cream",
@@ -39,13 +36,13 @@
       tag: "For the hours ahead",
       tint: "#c19e73",
       image: "assets/images/products/morrow-cream.jpg",
-      price: null,
+      price: 24500,
     },
   ];
 
   const icon = (id) => `<svg aria-hidden="true"><use href="#i-${id}"/></svg>`;
 
-  E.productCard = (p) => `
+  E.productCard = (p, opts) => `
     <article class="pcard">
       <a class="pcard__img" href="product.html?id=${p.id}" style="--tint:${p.tint}">
         <img src="${p.image}" alt="${p.name}" loading="lazy">
@@ -56,7 +53,7 @@
       <div class="pcard__body">
         <span class="pcard__cat">${p.category}</span>
         <h3 class="pcard__name">${p.name}</h3>
-        ${p.price != null ? `<span class="pcard__price">${E.formatPrice(p.price)}</span>` : ""}
+        ${opts && opts.showPrice === true && p.price != null ? `<span class="pcard__price">${E.formatPrice(p.price)}</span>` : ""}
         <button class="btn btn--dark" data-add="${p.id}">Build this step ${icon("arrow")}</button>
         <p class="pcard__cap">Learn how this step fits your skin.</p>
       </div>
