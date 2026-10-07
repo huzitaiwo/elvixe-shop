@@ -1,0 +1,88 @@
+.shead {
+  background: var(--cream-200);
+  padding-block: clamp(48px, 7vw, 96px) clamp(32px, 5vw, 64px);
+}
+.shead__grid {
+  display: grid;
+  grid-template-columns: 28% 1fr;
+  gap: 24px;
+}
+.shead h1 {
+  font-size: var(--fs-h2);
+}
+.shead .lede {
+  margin-top: 20px;
+  font-size: 0.875rem;
+  max-width: 38ch;
+}
+
+.sbody {
+  background: var(--cream-100);
+  padding-block: clamp(32px, 5vw, 64px) clamp(64px, 9vw, 120px);
+}
+.scity {
+  display: grid;
+  grid-template-columns: 28% 1fr;
+  gap: 24px;
+  padding-block: 28px;
+  border-top: 1px solid var(--line);
+}
+.scity:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.scity h2 {
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  letter-spacing: -0.04em;
+}
+.sgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.sitem {
+  padding: 18px;
+  background: var(--cream-50);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  display: grid;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+}
+.sitem h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.sitem a {
+  text-decoration: underline;
+  width: fit-content;
+}
+.todo {
+  background: rgba(243, 231, 109, 0.45);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  width: fit-content;
+}
+
+@media (max-width: 1000px) {
+  .sgrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .shead__grid,
+  .scity {
+    grid-template-columns: 1fr;
+  }
+  .shead h1 {
+    margin-top: 12px;
+  }
+}
+@media (max-width: 520px) {
+  .sgrid {
+    grid-template-columns: 1fr;
+  }
+}
