@@ -17,6 +17,7 @@
       ["Journal", "journal.html", "journal"],
       ["Stockists", "stockists.html", "stockists"],
       ["Contact", "contact.html", "contact"],
+      ["Account", "account.html", "account"],
     ],
   };
   const page = document.body.dataset.page;
@@ -75,6 +76,7 @@
     <div class="drawer__foot">
       <div class="drawer__row"><span>Subtotal</span><span id="cart-subtotal">₦0</span></div>
       <a class="btn btn--dark btn--block" href="checkout.html">Checkout ${icon("arrow")}</a>
+      <a class="drawer__account" href="account.html">Sign in or view your account</a>
     </div>
   </aside>`;
 

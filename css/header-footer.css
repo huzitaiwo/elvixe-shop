@@ -433,3 +433,10 @@ body[data-page="home"] .site-header {
   opacity: 0.45;
   pointer-events: none;
 }
+
+.drawer__account {
+  font-size: 0.6875rem;
+  text-align: center;
+  text-decoration: underline;
+  color: var(--ink-soft);
+}

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Account — Elvixe</title>
+    <meta name="description" content="Sign in or create your Elvixe account." />
+    <meta name="theme-color" content="#929986" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/header-footer.css" />
+    <link rel="stylesheet" href="css/account.css" />
+  </head>
+  <body data-page="account">
+    <div id="site-header"></div>
+
+    <main id="main">
+      <section class="ahead">
+        <div class="container ahead__grid">
+          <p class="eyebrow">/ Account</p>
+          <h1 id="a-title">Welcome back.</h1>
+        </div>
+      </section>
+
+      <section class="abody">
+        <div class="container">
+          <div class="acard">
+            <div class="atabs" id="a-tabs">
+              <button type="button" data-go="signin" class="is-on">
+                Sign in
+              </button>
+              <button type="button" data-go="signup">Create account</button>
+            </div>
+
+            <!-- Sign in -->
+            <div data-view="signin">
+              <form class="aform" id="f-signin" novalidate>
+                <div class="field">
+                  <label for="si-email">Email</label
+                  ><input
+                    id="si-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="si-pass">Password</label
+                  ><input
+                    id="si-pass"
+                    name="password"
+                    type="password"
+                    autocomplete="current-password"
+                    required
+                  />
+                </div>
+                <button class="btn btn--dark" type="submit">
+                  Sign in <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+                </button>
+                <button type="button" class="alink" data-go="reset">
+                  Forgot your password?
+                </button>
+                <p class="astatus" role="status"></p>
+              </form>
+            </div>
+
+            <!-- Create account -->
+            <div data-view="signup" hidden>
+              <form class="aform" id="f-signup" novalidate>
+                <div class="field">
+                  <label for="su-name">Name</label
+                  ><input
+                    id="su-name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    maxlength="100"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="su-email">Email</label
+                  ><input
+                    id="su-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="su-pass">Password</label
+                  ><input
+                    id="su-pass"
+                    name="password"
+                    type="password"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                  /><small>At least 8 characters.</small>
+                </div>
+                <button class="btn btn--dark" type="submit">
+                  Create account
+                  <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+                </button>
+                <p class="astatus" role="status"></p>
+              </form>
+            </div>
+
+            <!-- Reset password -->
+            <div data-view="reset" hidden>
+              <form class="aform" id="f-reset" novalidate>
+                <p class="aintro">
+                  Enter your email and we’ll send you a link to choose a new
+                  password.
+                </p>
+                <div class="field">
+                  <label for="rs-email">Email</label
+                  ><input
+                    id="rs-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+                <button class="btn btn--dark" type="submit">
+                  Send reset link
+                  <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+                </button>
+                <button type="button" class="alink" data-go="signin">
+                  Back to sign in
+                </button>
+                <p class="astatus" role="status"></p>
+              </form>
+            </div>
+
+            <!-- Social sign-in (shown on sign in / create account) -->
+            <div class="asocial" id="a-social">
+              <span class="asocial__or">or</span>
+              <button
+                type="button"
+                class="btn btn--outline btn--block"
+                id="btn-google"
+              >
+                Continue with Google
+              </button>
+              <p class="astatus" id="google-status" role="status"></p>
+            </div>
+
+            <!-- Signed in -->
+            <div data-view="account" hidden>
+              <p class="eyebrow">/ Signed in as</p>
+              <p class="aemail" id="a-email"></p>
+              <div class="aorders">
+                <h2>Your orders</h2>
+                <p class="todo">
+                  [TODO: order history appears here once checkout is built]
+                </p>
+              </div>
+              <div class="aactions">
+                <button
+                  type="button"
+                  class="btn btn--outline"
+                  id="btn-change-pass"
+                >
+                  Change password
+                </button>
+                <button type="button" class="btn btn--dark" id="btn-signout">
+                  Sign out
+                </button>
+              </div>
+              <p class="astatus" id="account-status" role="status"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/cart.js"></script>
+    <script type="module" src="js/account.js"></script>
+  </body>
+</html>
