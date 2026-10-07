@@ -1,15 +1,13 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-// Paste YOUR config from Firebase console → Project settings → Your apps.
-// These values are public by design; the security rules are what protect the data.
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyBjmPSCgMkJswFfSjkNTyxXLixZA8ZiV4I",
+  authDomain: "elvixe-shop.firebaseapp.com",
+  projectId: "elvixe-shop",
+  storageBucket: "elvixe-shop.firebasestorage.app",
+  messagingSenderId: "384104818938",
+  appId: "1:384104818938:web:0e8d8828c715a7379b8143",
 };
 
 export const app = initializeApp(firebaseConfig);
