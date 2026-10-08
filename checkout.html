@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout — Elvixe</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#929986" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/header-footer.css" />
+    <link rel="stylesheet" href="css/checkout.css" />
+  </head>
+  <body data-page="checkout">
+    <div id="site-header"></div>
+
+    <main id="main">
+      <section class="khead">
+        <div class="container khead__grid">
+          <p class="eyebrow">/ Checkout</p>
+          <h1>Almost there.</h1>
+        </div>
+      </section>
+
+      <section class="kbody">
+        <div class="container" id="k-root">
+          <div class="kgrid" id="k-grid">
+            <form class="kform" id="k-form" novalidate>
+              <h2>Contact</h2>
+              <div class="field">
+                <label for="k-email">Email</label
+                ><input
+                  id="k-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  maxlength="200"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="k-name">Full name</label
+                ><input
+                  id="k-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  maxlength="100"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="k-phone">Phone</label
+                ><input
+                  id="k-phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  maxlength="20"
+                  required
+                />
+              </div>
+
+              <h2>Delivery</h2>
+              <div class="field">
+                <label for="k-address">Address</label
+                ><input
+                  id="k-address"
+                  name="address"
+                  type="text"
+                  autocomplete="street-address"
+                  maxlength="200"
+                  required
+                />
+              </div>
+              <div class="krow">
+                <div class="field">
+                  <label for="k-city">City / area</label
+                  ><input
+                    id="k-city"
+                    name="city"
+                    type="text"
+                    autocomplete="address-level2"
+                    maxlength="100"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="k-state">State</label
+                  ><select
+                    id="k-state"
+                    name="state"
+                    autocomplete="address-level1"
+                    required
+                  >
+                    <option value="">Select state</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="k-notes">Delivery notes (optional)</label
+                ><textarea
+                  id="k-notes"
+                  name="notes"
+                  rows="3"
+                  maxlength="300"
+                ></textarea>
+              </div>
+
+              <p class="kerr" id="k-err" role="alert"></p>
+              <button class="btn btn--dark btn--block" type="submit" id="k-pay">
+                Pay <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+              </button>
+              <p class="knote">
+                Payments are processed securely by Paystack. We never see your
+                card details.
+              </p>
+            </form>
+
+            <aside class="ksum" aria-label="Order summary">
+              <h2>Your order</h2>
+              <ul id="k-items"></ul>
+              <dl class="ksum__totals">
+                <div>
+                  <dt>Subtotal</dt>
+                  <dd id="k-sub"></dd>
+                </div>
+                <div>
+                  <dt>Delivery</dt>
+                  <dd id="k-del"></dd>
+                </div>
+                <div class="is-total">
+                  <dt>Total</dt>
+                  <dd id="k-total"></dd>
+                </div>
+              </dl>
+              <p class="knote" id="k-free"></p>
+            </aside>
+          </div>
+
+          <div class="kempty" id="k-empty" hidden>
+            <h2>Your bag is empty.</h2>
+            <p>Add a step or two from the edit, then come back to check out.</p>
+            <a class="btn btn--dark" href="shop.html"
+              >Explore the edit
+              <svg aria-hidden="true"><use href="#i-arrow" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script type="module" src="js/checkout.js"></script>
+  </body>
+</html>
