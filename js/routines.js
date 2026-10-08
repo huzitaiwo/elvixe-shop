@@ -1,4 +1,4 @@
-(function () {
+window.elvixe.whenReady(function () {
   const E = window.elvixe;
   const todo = (t) => `<span class="todo">[TODO: ${t}]</span>`;
   const icon = (n) => `<svg aria-hidden="true"><use href="#i-${n}"/></svg>`;
@@ -61,4 +61,4 @@
       ${side}
     </li>`;
   }).join("");
-})();
+});

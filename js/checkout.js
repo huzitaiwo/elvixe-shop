@@ -104,7 +104,7 @@ function render() {
   $("k-pay").firstChild.textContent = `Pay ${E.formatPrice(t.total)} `;
 }
 document.addEventListener("cart:change", render);
-render();
+E.whenReady(render);
 
 const err = (msg) => {
   $("k-err").textContent = msg || "";
@@ -118,6 +118,10 @@ const bad = (name, on) =>
 $("k-form").addEventListener("submit", async (e) => {
   e.preventDefault();
   err("");
+  if (!E.ready)
+    return err(
+      "Still loading the latest prices. Please try again in a moment.",
+    );
   const f = e.currentTarget,
     btn = $("k-pay");
   const v = Object.fromEntries(
