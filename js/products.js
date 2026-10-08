@@ -40,6 +40,13 @@
     },
   ];
 
+  // Set true by catalog.js once Firestore has answered (or failed, in which case the list above is used)
+  E.ready = false;
+  E.whenReady = (fn) =>
+    E.ready
+      ? fn()
+      : document.addEventListener("catalog:ready", fn, { once: true });
+
   const icon = (id) => `<svg aria-hidden="true"><use href="#i-${id}"/></svg>`;
 
   E.productCard = (p, opts) => `
