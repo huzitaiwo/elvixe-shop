@@ -1,4 +1,4 @@
-(function () {
+window.elvixe.whenReady(function () {
   // TODO: prices (₦) — the reference cards don't show prices, so none are invented here
   const PRODUCTS = window.elvixe.products;
   const STEPS = [
@@ -61,4 +61,4 @@
       }
     });
   });
-})();
+});

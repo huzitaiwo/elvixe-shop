@@ -1,4 +1,4 @@
-(function () {
+window.elvixe.whenReady(function () {
   const E = window.elvixe;
   const id = new URLSearchParams(location.search).get("id");
   const list = E.products || [];
@@ -69,4 +69,4 @@
       .join("");
     document.getElementById("more").hidden = false;
   }
-})();
+});
