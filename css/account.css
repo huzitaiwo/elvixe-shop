@@ -172,3 +172,29 @@
     flex-direction: column;
   }
 }
+
+.olist {
+  display: grid;
+  gap: 10px;
+  font-size: 0.8125rem;
+}
+.olist li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--cream-100);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.olist small {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink-soft);
+  font-size: 0.6875rem;
+}
+.olist__empty {
+  color: var(--ink-soft);
+  background: none !important;
+  border-style: dashed !important;
+}

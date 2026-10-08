@@ -1,4 +1,10 @@
-import { auth } from "./firebase-config.js";
+import { auth, db } from "./firebase-config.js";
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -192,6 +198,7 @@ function renderAccount(user) {
   views.forEach((v) => (v.hidden = v.dataset.view !== "account"));
   tabs.hidden = true;
   social.hidden = true;
+  loadOrders(user);
 }
 
 onAuthStateChanged(auth, (user) => {
@@ -201,3 +208,32 @@ onAuthStateChanged(auth, (user) => {
     renderAccount(user);
   } else show("signin");
 });
+
+async function loadOrders(user) {
+  const list = $("#a-orders");
+  const naira = (n) => "₦" + Number(n).toLocaleString("en-NG");
+  const label = {
+    pending: "Awaiting payment",
+    paid_unverified: "Paid",
+    paid: "Paid",
+  };
+  try {
+    const snap = await getDocs(
+      query(collection(db, "orders"), where("uid", "==", user.uid)),
+    );
+    const rows = snap.docs
+      .map((d) => d.data())
+      .sort(
+        (a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0),
+      );
+    if (!rows.length) return;
+    list.innerHTML = rows
+      .map(
+        (o) =>
+          `<li><span>${o.paystackRef}<small>${(o.items || []).map((i) => `${i.name} × ${i.qty}`).join(", ")}</small></span><span>${naira(o.total)}<small>${label[o.status] || o.status}</small></span></li>`,
+      )
+      .join("");
+  } catch (e) {
+    console.error(e);
+  }
+}

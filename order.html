@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Order placed — Elvixe</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#929986" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/header-footer.css" />
+    <link rel="stylesheet" href="css/checkout.css" />
+  </head>
+  <body data-page="order">
+    <div id="site-header"></div>
+
+    <main id="main">
+      <section class="khead">
+        <div class="container khead__grid">
+          <p class="eyebrow">/ Order placed</p>
+          <h1 id="o-title">Thank you.</h1>
+        </div>
+      </section>
+      <section class="kbody">
+        <div class="container"><div class="odone" id="o-root"></div></div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+      (function () {
+        var E = window.elvixe,
+          root = document.getElementById("o-root"),
+          o = null;
+        var esc = function (s) {
+          return String(s).replace(/[&<>"]/g, function (c) {
+            return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+          });
+        };
+        try {
+          o = JSON.parse(sessionStorage.getItem("elvixe_last_order"));
+        } catch (e) {}
+
+        if (!o) {
+          root.innerHTML =
+            '<p>If you have just paid, your order is safely recorded. Keep your Paystack receipt as proof of payment, and <a href="contact.html"><u>contact us</u></a> with any questions.</p>' +
+            '<a class="btn btn--dark" href="shop.html">Back to the edit</a>';
+          return;
+        }
+        document.getElementById("o-title").textContent =
+          "Thank you, " + o.name.split(" ")[0] + ".";
+        root.innerHTML =
+          '<div class="odone__ref">Your order reference<strong>' +
+          esc(o.ref) +
+          "</strong></div>" +
+          "<p>Your payment went through. Please keep this reference, as you will need it if you contact us about this order.</p>" +
+          "<div><h2>Delivering to</h2><address>" +
+          esc(o.name) +
+          "<br>" +
+          esc(o.address) +
+          "<br>" +
+          esc(o.city) +
+          ", " +
+          esc(o.state) +
+          "<br>" +
+          esc(o.email) +
+          "</address></div>" +
+          '<div class="ksum"><h2>Your order</h2><ul>' +
+          o.items
+            .map(function (i) {
+              return (
+                '<li><span></span><span class="ksum__name">' +
+                esc(i.name) +
+                '<span class="ksum__qty">Qty ' +
+                i.qty +
+                '</span></span><span class="ksum__price">' +
+                E.formatPrice(i.qty * i.price) +
+                "</span></li>"
+              );
+            })
+            .join("") +
+          '</ul><dl class="ksum__totals">' +
+          "<div><dt>Subtotal</dt><dd>" +
+          E.formatPrice(o.subtotal) +
+          "</dd></div>" +
+          "<div><dt>Delivery</dt><dd>" +
+          (o.delivery ? E.formatPrice(o.delivery) : "Free") +
+          "</dd></div>" +
+          '<div class="is-total"><dt>Total</dt><dd>' +
+          E.formatPrice(o.total) +
+          "</dd></div></dl></div>" +
+          '<a class="btn btn--dark" href="shop.html">Keep exploring</a>';
+      })();
+    </script>
+  </body>
+</html>
